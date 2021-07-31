@@ -1,0 +1,20 @@
+{
+  "name": "MONGO",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index"
+  },
+  "dependencies": {
+    "@types/node": "^16.4.7",
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "ts-node": "^10.1.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  }
+}
