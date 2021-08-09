@@ -23,11 +23,8 @@ mongoose
   .catch((err) => console.log(err));
 
 
-app.use("/todos", require("./routes/todos"));
+app.use("/", require("./routes/todos"));
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
-});
 
 app.listen(PORT, () => {
   console.log("Server running on port : " + PORT);

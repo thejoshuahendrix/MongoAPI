@@ -1,0 +1,33 @@
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  justify-content: space-evenly;
+}
+.grid-item {
+  height: 20vh;
+  padding-top: 20%;
+  padding-bottom: 10%;
+  margin: auto;
+}
+.center {
+  text-align: center;
+  margin: 40px;
+  
+}
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    display: grid;
+    margin-bottom:10%;
+  }
+  .grid-item {
+    height: 5vh;
+  }
+  .center {
+    text-align: center;
+    margin: 80px;
+    
+  }
+}

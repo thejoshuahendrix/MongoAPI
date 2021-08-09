@@ -20,10 +20,10 @@ router.post("/", (req, res) => {
     newTodo.save().then((todo) => res.json(todo));
   });
   
-router.delete("/todos/:id", async (req, res, next) => {
+router.delete("/:id", async (req, res, next) => {
     try {
-      await Todo.findByIdAndRemove(req.params.id)
-      return success(res, "todo deleted!")
+      await Todo.findByIdAndRemove(req.params.id, {useFindAndModify:false})
+      
     } catch (err) {
       next({ status: 400, message: "failed to delete todo" })
     }
