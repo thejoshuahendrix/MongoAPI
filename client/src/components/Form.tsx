@@ -1,7 +1,17 @@
 import React from 'react'
 import { useState } from 'react';
+import { FormGroup } from 'reactstrap';
 import { useInput } from '../hooks';
 import { Container } from './Card';
+import styled from 'styled-components';
+
+const Input = styled.input`
+    width: 200px;
+    height: 75px;
+
+`
+
+
 
 const Form = () => {
     const { value: name, bind: bindName, reset: resetName } = useInput('');
@@ -21,17 +31,24 @@ const Form = () => {
     return (
         <Container>
             <form onSubmit={handleSubmit}>
-                <label>
-                    First Name:
-                    <input type="text" {...bindName} />
-                </label>
+                <FormGroup>
+                    <label>
+                        Name:
+                        <Input type="text" {...bindName} />
+                    </label>
+                </FormGroup>
+
                 <br />
+                <FormGroup>
                 <label>
                     Todo:
-                    <input type="text" {...bindTodo} />
+                    <input style={{ width: 200, height: 75, fontSize: 32, borderRadius: 10 }} type="text" {...bindTodo} />
                 </label>
+                </FormGroup>
                 <br />
-                <input type="submit" value="Submit" />
+                <FormGroup>
+                <input style={{ color:"#FF22FF", backgroundColor:"#00FF00",float:"right",marginRight:10, width: 200, height: 75, fontSize: 32, borderRadius: 10 }} type="submit" value="Submit" />
+                </FormGroup>
             </form>
         </Container>
     )

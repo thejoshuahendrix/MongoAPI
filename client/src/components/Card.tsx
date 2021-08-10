@@ -8,7 +8,7 @@ export const Container = styled.div<{ active: boolean }>`
     display: flex;
     flex-direction:column;
     justify-content: center;
-    background-color: #363636;
+    background-color: #161616;
     font-size: 1rem;
     margin: 2rem 2rem 2rem 2rem;
     align: vertical;
